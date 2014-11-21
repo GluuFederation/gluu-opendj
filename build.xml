@@ -575,7 +575,10 @@
       </classpath>
     </taskdef>
 
+    <property name="REVISION_NUMBER" value="9086" />
+<!--
     <getsvnrevision property="REVISION_NUMBER" />
+-->
 
     <!-- Get the url repo of the current Subversion workspace -->
     <taskdef name="getsvnurlrepo"
