@@ -34,7 +34,7 @@
 
 
   <!-- By default will build OpenDJ package -->
-  <property name="product"           value="${SHORT_NAME}" />
+  <property name="product"           value="${ORIG_SHORT_NAME}" />
 
 
   <!-- General properties -->
