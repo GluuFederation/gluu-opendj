@@ -89,7 +89,7 @@ public class GrizzlyLDAPConnectionFactoryTestCase extends SdkTestCase {
     private static final int ITERATIONS = 100;
 
     /** Test timeout for tests which need to wait for network events. */
-    private static final long TEST_TIMEOUT = 30L;
+    private static final long TEST_TIMEOUT = 60L;
 
     /*
      * It is usually quite a bad code smell to share state between unit tests.
@@ -210,13 +210,6 @@ public class GrizzlyLDAPConnectionFactoryTestCase extends SdkTestCase {
                 waitForConnect();
                 final MockConnectionEventListener listener = new MockConnectionEventListener();
                 connection.addConnectionEventListener(listener);
-
-                // Sleep to allow server start up
-		try {
-			Thread.sleep(10000);
-		} catch (InterruptedException ex) {
-			ex.printStackTrace();
-		}
 
                 // Now bind with timeout.
                 final PromiseImpl<LdapException, NeverThrowsException> promise = PromiseImpl.create();
