@@ -583,8 +583,10 @@ Please:
         </fileset>
       </classpath>
     </taskdef>
-
+<!--
     <getsvnrevision property="REVISION_NUMBER" />
+-->
+    <property name="REVISION_NUMBER" value="12776" />
 
     <!-- Get the url repo of the current Subversion workspace -->
     <taskdef name="getsvnurlrepo"

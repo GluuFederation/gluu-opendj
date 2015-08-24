@@ -60,8 +60,8 @@
     <jars.dir>${project.build.directory}/jars</jars.dir>
 
     <!-- Product information properties -->
-    <shortProductName>OpenDJ</shortProductName>
-    <lowerCaseProductName>opendj</lowerCaseProductName>
+    <shortProductName>GluuOpenDJ</shortProductName>
+    <lowerCaseProductName>gluuopendj</lowerCaseProductName>
     <patchFixIds />
     <isDebugBuild>false</isDebugBuild>
     <docHomepageUrl>http://opendj.forgerock.org/</docHomepageUrl>
