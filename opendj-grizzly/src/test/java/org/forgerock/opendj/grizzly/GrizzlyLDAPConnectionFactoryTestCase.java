@@ -211,6 +211,13 @@ public class GrizzlyLDAPConnectionFactoryTestCase extends SdkTestCase {
                 final MockConnectionEventListener listener = new MockConnectionEventListener();
                 connection.addConnectionEventListener(listener);
 
+                // Sleep to allow server start up
+		try {
+			Thread.sleep(10000);
+		} catch (InterruptedException ex) {
+			ex.printStackTrace();
+		}
+
                 // Now bind with timeout.
                 final PromiseImpl<LdapException, NeverThrowsException> promise = PromiseImpl.create();
                 final LdapPromise<BindResult> bindPromise = connection.bindAsync(newSimpleBindRequest());
