@@ -499,7 +499,7 @@ public class GenerateMessageFile extends Task {
         // if REGISTRY_FILE_NAME is already set, ensure that we computed the
         // same one
         File prevDescriptorsRegFile = new File(REGISTRY_FILE_NAME);
-        if (!prevDescriptorsRegFile.equals(descriptorsRegFile)) {
+        if (!prevDescriptorsRegFile.getCanonicalPath().equals(descriptorsRegFile.getCanonicalPath())) {
           throw new BuildException("Error processing " + dest
             + ": all messages must be located in the same package thus "
             + "name of the source file should be "
